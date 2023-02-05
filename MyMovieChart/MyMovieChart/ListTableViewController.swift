@@ -9,81 +9,125 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
 
+    @IBOutlet var addBtn: UIButton!
+    
+    lazy var list: [MovieVO] = {
+        var datalist = [MovieVO]()
+        return datalist
+    }()
+    
+    var page = 1
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        callMovieAPI()
+        
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return list.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let row = list[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell")! as! MovieCell
+        
+//        let title = cell.viewWithTag(101) as? UILabel
+//        let desc = cell.viewWithTag(102) as? UILabel
+//        let opendate = cell.viewWithTag(103) as? UILabel
+//        let rating = cell.viewWithTag(104) as? UILabel
+        
+        cell.title?.text = row.title
+        cell.desc?.text = row.description
+        cell.opendate?.text = row.opendate
+        cell.rating?.text = "\(row.rating!)"
+        
+        
+        DispatchQueue.main.async{
+            cell.thumbnail.image = self.getThumbnailImage(indexPath.row)
+        }
+        
         return cell
+    
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("\(indexPath.row) 행이 선택되었습니다.")
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    
+    @IBAction func add(_ sender: Any) {
+        
+        self.page += 1
+        
+        callMovieAPI()
+        
+        self.tableView.reloadData()
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    func callMovieAPI(){
+        
+        let url = "http://115.68.183.178:2029/hoppin/movies?order=releasedateasc&count=10&page=\(self.page)&version=1&genreId="
+        
+        let apiURI: URL! = URL(string: url)
+        
+        let apidata = try! Data(contentsOf: apiURI)
+        
+        let log = NSString(data: apidata, encoding: String.Encoding.utf8.rawValue) ?? ""
+        NSLog("API Result = \(log)")
+        
+        
+        do{
+            let apiDictionary = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
+            
+            let hoppin = apiDictionary["hoppin"] as! NSDictionary
+            let totalCount = (hoppin["totalCount"] as? NSString)!.integerValue
+            
+            if list.count >= totalCount{
+                addBtn.isHidden = true
+            }
+            let movies = hoppin["movies"] as! NSDictionary
+            let movie = movies["movie"] as! NSArray
+            
+            for row in movie {
+                let r = row as! NSDictionary
+                
+                let mvo = MovieVO()
+                
+                mvo.title = r["title"] as? String
+                mvo.description = r["genreNames"] as? String
+                mvo.thumbnail = r["thumbnailImage"] as? String
+                mvo.detail = r["linkUrl"] as? String
+                mvo.rating = ((r["ratingAverage"] as! NSString).doubleValue)
+                
+                let url: URL! = URL(string: mvo.thumbnail!)
+                let imageData = try! Data(contentsOf: url)
+                mvo.thumbnailImage = UIImage(data: imageData)
+                
+                list.append(mvo)
+            }
+            self.tableView.reloadData()
+        }catch{
+            
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    func getThumbnailImage(_ index: Int) -> UIImage{
+        
+        let mvo = list[index]
+        
+        if let savedImage = mvo.thumbnailImage{
+            return savedImage
+        }else{
+            let url: URL! = URL(string: mvo.thumbnail!)
+            let imageData = try! Data(contentsOf: url)
+            mvo.thumbnailImage = UIImage(data: imageData)
+            
+            return mvo.thumbnailImage!
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

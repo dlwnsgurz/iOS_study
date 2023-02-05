@@ -7,39 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B1A7E25298D5C4C00F1901D /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1A7E24298D5C4C00F1901D /* MovieCell.swift */; };
-		9B1A7E2A298D5F3000F1901D /* rain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B1A7E27298D5F3000F1901D /* rain.jpg */; };
-		9B1A7E2B298D5F3000F1901D /* secret.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B1A7E28298D5F3000F1901D /* secret.jpg */; };
-		9B1A7E2C298D5F3000F1901D /* darknight.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B1A7E29298D5F3000F1901D /* darknight.jpg */; };
-		9B9E21F7298D1EC300C45048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E21F6298D1EC300C45048 /* AppDelegate.swift */; };
-		9B9E21F9298D1EC300C45048 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E21F8298D1EC300C45048 /* SceneDelegate.swift */; };
-		9B9E21FB298D1EC300C45048 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E21FA298D1EC300C45048 /* ViewController.swift */; };
-		9B9E21FE298D1EC300C45048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E21FC298D1EC300C45048 /* Main.storyboard */; };
-		9B9E2200298D1EC400C45048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E21FF298D1EC400C45048 /* Assets.xcassets */; };
-		9B9E2203298D1EC400C45048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B9E2201298D1EC400C45048 /* LaunchScreen.storyboard */; };
-		9B9E220B298D203200C45048 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E220A298D203200C45048 /* ListTableViewController.swift */; };
-		9B9E220D298D40E500C45048 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9E220C298D40E500C45048 /* MovieVO.swift */; };
+		9BEEA3BC298FB71A00CAE814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEEA3BB298FB71A00CAE814 /* AppDelegate.swift */; };
+		9BEEA3BE298FB71A00CAE814 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEEA3BD298FB71A00CAE814 /* SceneDelegate.swift */; };
+		9BEEA3C0298FB71A00CAE814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEEA3BF298FB71A00CAE814 /* ViewController.swift */; };
+		9BEEA3C3298FB71A00CAE814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEEA3C1298FB71A00CAE814 /* Main.storyboard */; };
+		9BEEA3C5298FB71B00CAE814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BEEA3C4298FB71B00CAE814 /* Assets.xcassets */; };
+		9BEEA3C8298FB71B00CAE814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BEEA3C6298FB71B00CAE814 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B1A7E24298D5C4C00F1901D /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
-		9B1A7E27298D5F3000F1901D /* rain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rain.jpg; sourceTree = "<group>"; };
-		9B1A7E28298D5F3000F1901D /* secret.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = secret.jpg; sourceTree = "<group>"; };
-		9B1A7E29298D5F3000F1901D /* darknight.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darknight.jpg; sourceTree = "<group>"; };
-		9B9E21F3298D1EC300C45048 /* MyMovieChart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMovieChart.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B9E21F6298D1EC300C45048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B9E21F8298D1EC300C45048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B9E21FA298D1EC300C45048 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9B9E21FD298D1EC300C45048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B9E21FF298D1EC400C45048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9B9E2202298D1EC400C45048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9B9E2204298D1EC400C45048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B9E220A298D203200C45048 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		9B9E220C298D40E500C45048 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		9BEEA3B8298FB71A00CAE814 /* MyMovieChart-SpinOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMovieChart-SpinOff.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BEEA3BB298FB71A00CAE814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BEEA3BD298FB71A00CAE814 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9BEEA3BF298FB71A00CAE814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BEEA3C2298FB71A00CAE814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BEEA3C4298FB71B00CAE814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BEEA3C7298FB71B00CAE814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BEEA3C9298FB71B00CAE814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B9E21F0298D1EC300C45048 /* Frameworks */ = {
+		9BEEA3B5298FB71A00CAE814 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,86 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B1A7E26298D5DFC00F1901D /* Resources */ = {
+		9BEEA3AF298FB71A00CAE814 = {
 			isa = PBXGroup;
 			children = (
-				9B1A7E29298D5F3000F1901D /* darknight.jpg */,
-				9B1A7E27298D5F3000F1901D /* rain.jpg */,
-				9B1A7E28298D5F3000F1901D /* secret.jpg */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		9B9E21EA298D1EC300C45048 = {
-			isa = PBXGroup;
-			children = (
-				9B1A7E26298D5DFC00F1901D /* Resources */,
-				9B9E21F5298D1EC300C45048 /* MyMovieChart */,
-				9B9E21F4298D1EC300C45048 /* Products */,
+				9BEEA3BA298FB71A00CAE814 /* MyMovieChart-SpinOff */,
+				9BEEA3B9298FB71A00CAE814 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9B9E21F4298D1EC300C45048 /* Products */ = {
+		9BEEA3B9298FB71A00CAE814 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B9E21F3298D1EC300C45048 /* MyMovieChart.app */,
+				9BEEA3B8298FB71A00CAE814 /* MyMovieChart-SpinOff.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B9E21F5298D1EC300C45048 /* MyMovieChart */ = {
+		9BEEA3BA298FB71A00CAE814 /* MyMovieChart-SpinOff */ = {
 			isa = PBXGroup;
 			children = (
-				9B9E21F6298D1EC300C45048 /* AppDelegate.swift */,
-				9B9E21F8298D1EC300C45048 /* SceneDelegate.swift */,
-				9B9E21FA298D1EC300C45048 /* ViewController.swift */,
-				9B9E21FC298D1EC300C45048 /* Main.storyboard */,
-				9B1A7E24298D5C4C00F1901D /* MovieCell.swift */,
-				9B9E220C298D40E500C45048 /* MovieVO.swift */,
-				9B9E220A298D203200C45048 /* ListTableViewController.swift */,
-				9B9E21FF298D1EC400C45048 /* Assets.xcassets */,
-				9B9E2201298D1EC400C45048 /* LaunchScreen.storyboard */,
-				9B9E2204298D1EC400C45048 /* Info.plist */,
+				9BEEA3BB298FB71A00CAE814 /* AppDelegate.swift */,
+				9BEEA3BD298FB71A00CAE814 /* SceneDelegate.swift */,
+				9BEEA3BF298FB71A00CAE814 /* ViewController.swift */,
+				9BEEA3C1298FB71A00CAE814 /* Main.storyboard */,
+				9BEEA3C4298FB71B00CAE814 /* Assets.xcassets */,
+				9BEEA3C6298FB71B00CAE814 /* LaunchScreen.storyboard */,
+				9BEEA3C9298FB71B00CAE814 /* Info.plist */,
 			);
-			path = MyMovieChart;
+			path = "MyMovieChart-SpinOff";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B9E21F2298D1EC300C45048 /* MyMovieChart */ = {
+		9BEEA3B7298FB71A00CAE814 /* MyMovieChart-SpinOff */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B9E2207298D1EC400C45048 /* Build configuration list for PBXNativeTarget "MyMovieChart" */;
+			buildConfigurationList = 9BEEA3CC298FB71B00CAE814 /* Build configuration list for PBXNativeTarget "MyMovieChart-SpinOff" */;
 			buildPhases = (
-				9B9E21EF298D1EC300C45048 /* Sources */,
-				9B9E21F0298D1EC300C45048 /* Frameworks */,
-				9B9E21F1298D1EC300C45048 /* Resources */,
+				9BEEA3B4298FB71A00CAE814 /* Sources */,
+				9BEEA3B5298FB71A00CAE814 /* Frameworks */,
+				9BEEA3B6298FB71A00CAE814 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyMovieChart;
-			productName = MyMovieChart;
-			productReference = 9B9E21F3298D1EC300C45048 /* MyMovieChart.app */;
+			name = "MyMovieChart-SpinOff";
+			productName = "MyMovieChart-SpinOff";
+			productReference = 9BEEA3B8298FB71A00CAE814 /* MyMovieChart-SpinOff.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9B9E21EB298D1EC300C45048 /* Project object */ = {
+		9BEEA3B0298FB71A00CAE814 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					9B9E21F2298D1EC300C45048 = {
+					9BEEA3B7298FB71A00CAE814 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 9B9E21EE298D1EC300C45048 /* Build configuration list for PBXProject "MyMovieChart" */;
+			buildConfigurationList = 9BEEA3B3298FB71A00CAE814 /* Build configuration list for PBXProject "MyMovieChart-SpinOff" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -136,61 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 9B9E21EA298D1EC300C45048;
-			productRefGroup = 9B9E21F4298D1EC300C45048 /* Products */;
+			mainGroup = 9BEEA3AF298FB71A00CAE814;
+			productRefGroup = 9BEEA3B9298FB71A00CAE814 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B9E21F2298D1EC300C45048 /* MyMovieChart */,
+				9BEEA3B7298FB71A00CAE814 /* MyMovieChart-SpinOff */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B9E21F1298D1EC300C45048 /* Resources */ = {
+		9BEEA3B6298FB71A00CAE814 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B1A7E2C298D5F3000F1901D /* darknight.jpg in Resources */,
-				9B9E2203298D1EC400C45048 /* LaunchScreen.storyboard in Resources */,
-				9B1A7E2A298D5F3000F1901D /* rain.jpg in Resources */,
-				9B9E2200298D1EC400C45048 /* Assets.xcassets in Resources */,
-				9B9E21FE298D1EC300C45048 /* Main.storyboard in Resources */,
-				9B1A7E2B298D5F3000F1901D /* secret.jpg in Resources */,
+				9BEEA3C8298FB71B00CAE814 /* LaunchScreen.storyboard in Resources */,
+				9BEEA3C5298FB71B00CAE814 /* Assets.xcassets in Resources */,
+				9BEEA3C3298FB71A00CAE814 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B9E21EF298D1EC300C45048 /* Sources */ = {
+		9BEEA3B4298FB71A00CAE814 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B9E21FB298D1EC300C45048 /* ViewController.swift in Sources */,
-				9B9E21F7298D1EC300C45048 /* AppDelegate.swift in Sources */,
-				9B1A7E25298D5C4C00F1901D /* MovieCell.swift in Sources */,
-				9B9E21F9298D1EC300C45048 /* SceneDelegate.swift in Sources */,
-				9B9E220B298D203200C45048 /* ListTableViewController.swift in Sources */,
-				9B9E220D298D40E500C45048 /* MovieVO.swift in Sources */,
+				9BEEA3C0298FB71A00CAE814 /* ViewController.swift in Sources */,
+				9BEEA3BC298FB71A00CAE814 /* AppDelegate.swift in Sources */,
+				9BEEA3BE298FB71A00CAE814 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9B9E21FC298D1EC300C45048 /* Main.storyboard */ = {
+		9BEEA3C1298FB71A00CAE814 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9B9E21FD298D1EC300C45048 /* Base */,
+				9BEEA3C2298FB71A00CAE814 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		9B9E2201298D1EC400C45048 /* LaunchScreen.storyboard */ = {
+		9BEEA3C6298FB71B00CAE814 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9B9E2202298D1EC400C45048 /* Base */,
+				9BEEA3C7298FB71B00CAE814 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -198,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9B9E2205298D1EC400C45048 /* Debug */ = {
+		9BEEA3CA298FB71B00CAE814 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		9B9E2206298D1EC400C45048 /* Release */ = {
+		9BEEA3CB298FB71B00CAE814 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -312,7 +280,7 @@
 			};
 			name = Release;
 		};
-		9B9E2208298D1EC400C45048 /* Debug */ = {
+		9BEEA3CD298FB71B00CAE814 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -320,7 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyMovieChart/Info.plist;
+				INFOPLIST_FILE = "MyMovieChart-SpinOff/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -331,7 +299,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dlwnsgurz.MyMovieChart;
+				PRODUCT_BUNDLE_IDENTIFIER = "dlwnsgurz.MyMovieChart-SpinOff";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +307,7 @@
 			};
 			name = Debug;
 		};
-		9B9E2209298D1EC400C45048 /* Release */ = {
+		9BEEA3CE298FB71B00CAE814 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -347,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyMovieChart/Info.plist;
+				INFOPLIST_FILE = "MyMovieChart-SpinOff/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -358,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dlwnsgurz.MyMovieChart;
+				PRODUCT_BUNDLE_IDENTIFIER = "dlwnsgurz.MyMovieChart-SpinOff";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -369,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B9E21EE298D1EC300C45048 /* Build configuration list for PBXProject "MyMovieChart" */ = {
+		9BEEA3B3298FB71A00CAE814 /* Build configuration list for PBXProject "MyMovieChart-SpinOff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B9E2205298D1EC400C45048 /* Debug */,
-				9B9E2206298D1EC400C45048 /* Release */,
+				9BEEA3CA298FB71B00CAE814 /* Debug */,
+				9BEEA3CB298FB71B00CAE814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B9E2207298D1EC400C45048 /* Build configuration list for PBXNativeTarget "MyMovieChart" */ = {
+		9BEEA3CC298FB71B00CAE814 /* Build configuration list for PBXNativeTarget "MyMovieChart-SpinOff" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B9E2208298D1EC400C45048 /* Debug */,
-				9B9E2209298D1EC400C45048 /* Release */,
+				9BEEA3CD298FB71B00CAE814 /* Debug */,
+				9BEEA3CE298FB71B00CAE814 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9B9E21EB298D1EC300C45048 /* Project object */;
+	rootObject = 9BEEA3B0298FB71A00CAE814 /* Project object */;
 }
