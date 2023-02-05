@@ -10,7 +10,7 @@ import UIKit
 class ThearterListController: UITableViewController {
 
     
-    var list: [NSDictionary]()
+    var list = [NSDictionary]()
     var startPoint = 0
     
     override func viewDidLoad() {
@@ -34,6 +34,17 @@ class ThearterListController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_map"{
+            
+            let path = self.tableView.indexPath(for: sender as! TheaterCell)
+            
+            let data = list[path!.row]
+            
+            (segue.destination as? TheaterViewController)?.param = data
+        }
     }
 
     /*

@@ -85,11 +85,11 @@ class ListTableViewController: UITableViewController {
             let apiDictionary = try JSONSerialization.jsonObject(with: apidata, options: []) as! NSDictionary
             
             let hoppin = apiDictionary["hoppin"] as! NSDictionary
-            let totalCount = (hoppin["totalCount"] as? NSString)!.integerValue
+            let totalCount = (hoppin["totalCount"] as? NSString)?.integerValue
             
-            if list.count >= totalCount{
-                addBtn.isHidden = true
-            }
+//            if list.count >= totalCount{
+//                addBtn.isHidden = true
+//            }
             let movies = hoppin["movies"] as! NSDictionary
             let movie = movies["movie"] as! NSArray
             
@@ -128,6 +128,20 @@ class ListTableViewController: UITableViewController {
             mvo.thumbnailImage = UIImage(data: imageData)
             
             return mvo.thumbnailImage!
+        }
+    }
+}
+
+extension ListTableViewController{
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detail_segue"
+        {
+            let path = self.tableView.indexPath(for: sender as! MovieCell)
+            
+            let detailVC = segue.destination as? DetailViewController
+            
+            detailVC?.mvo = self.list[path!.row]
         }
     }
 }

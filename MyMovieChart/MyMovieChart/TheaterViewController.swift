@@ -6,13 +6,33 @@
 //
 
 import UIKit
-
+import MapKit
 class TheaterViewController: UIViewController {
 
+    @IBOutlet var map: MKMapView!
+    
+    var param: NSDictionary!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = param["상영관명"] as? String
         // Do any additional setup after loading the view.
+        
+        let lat = (param?["위도"] as! NSString).doubleValue
+        let lng = (param?["경도"] as! NSString).doubleValue
+        
+        let location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+        
+        let regionRadius: CLLocationDistance = 100
+        
+        let coordinateRegion = MKCoordinateRegion(center: location, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        
+        map.setRegion(coordinateRegion, animated: true)
+        
+        let point = MKPointAnnotation()
+        point.coordinate = location
+        self.map.addAnnotation(point)
+        
     }
     
 
