@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         // let alert = UIAlertController(....)
         // present(alert, animated: ..)
     }
@@ -52,6 +53,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     @IBAction func login(_ sender: Any) {
         let title = "iTunes Store에 로그인"
         let message = "Apple ID의 비밀번호를 입력하세요."
@@ -72,10 +74,15 @@ class ViewController: UIViewController {
         alert.addAction(ok)
         alert.addAction(cancel)
         
-        alert.addTextField(){ (tf) in
-            tf.placeholder = "암호 입력"
-            tf.isSecureTextEntry = true
+        // 알림창에 텍스트 필드 추가.
+        // 클로저의 인자 값을 생략.
+        // 클로저의 타입이 인자가 있어야 함.
+        alert.addTextField(){
+            $0.placeholder = "암호 입력"
+            $0.isSecureTextEntry = true
         }
+        
+        // 알림창 발생
         present(alert, animated: true)
         
     }
