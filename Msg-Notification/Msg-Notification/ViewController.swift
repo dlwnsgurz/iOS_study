@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     }
 
 
+    // UI에 대한 부분은 메인 쓰레드에서 처리를 해야한다.
+    // 비동기 클로저는 대부분 백그라운드에서 실행되기 때문에, 클로저에서 UI에 대한 작업은
+    // 메인 쓰레드에서 처리할 수 있도록 디스패치 큐를 이용.
     @IBAction func save(_ sender: Any) {
         if #available(iOS 11.0, *){
             UNUserNotificationCenter.current().getNotificationSettings{ (settings) in
