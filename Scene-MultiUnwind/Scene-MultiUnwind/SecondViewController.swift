@@ -17,6 +17,8 @@ class SecondViewController: UIViewController {
     
     @IBAction func goToPage2(_ sender: UIStoryboardSegue){
         
+        // 현재 뷰 컨트롤러로 이동.
+        // 하위 뷰 컨트롤러의 인스턴스가 모두 해제됨.
     }
 
     /*
