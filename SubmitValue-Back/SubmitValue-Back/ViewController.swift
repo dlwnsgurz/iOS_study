@@ -26,6 +26,7 @@ class ViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
 
+        /// 앱의 생명주기 동안, 단 하나만 존재하는 AppDelegate 객체의 인스턴스.
 //        let ad = UIApplication.shared.delegate as? AppDelegate
 //
 //        if let email = ad?.paramEmail{
@@ -40,6 +41,7 @@ class ViewController: UIViewController {
 //            resultInterval.text = "\(Int(interval))분 후 갱신"
 //        }
         
+        // 코코아 터치 프레임워크에 존재하는 UserDefaults 객체의 인스턴스.
         let ud = UserDefaults.standard
         
         if let email = ud.string(forKey: "email"){
