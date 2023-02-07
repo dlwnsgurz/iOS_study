@@ -10,7 +10,7 @@ import UIKit
 
 class ResultViewController: UIViewController{
     
-    
+    // 화면에 값을 표시하는데 사용하는 레이블
     @IBOutlet var resultEmail: UILabel!
     @IBOutlet var resultIsUpdate: UILabel!
     @IBOutlet var resultInterval: UILabel!
