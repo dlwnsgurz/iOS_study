@@ -24,19 +24,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wuw-bg-rGZ">
-                                <rect key="frame" x="166" y="419" width="91" height="31"/>
+                                <rect key="frame" x="108" y="419" width="207" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go Page 2"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go Page 2 by Custom segue"/>
                                 <connections>
                                     <segue destination="ppr-8R-V99" kind="custom" identifier="CustomSegue" customClass="NewSegue" customModule="Scene_CustomSegue" customModuleProvider="target" id="mg1-Nx-75V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iia-By-nCM">
-                                <rect key="frame" x="109" y="578" width="205" height="31"/>
+                                <rect key="frame" x="113" y="578" width="197" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Go Page 2 by actione segue"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go Page 2 by action segue"/>
                                 <connections>
                                     <segue destination="ppr-8R-V99" kind="show" identifier="Basic Segue" id="hYF-xI-DxS"/>
                                 </connections>
@@ -50,12 +50,12 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="PwA-IP-BiF">
             <objects>
-                <viewController id="ppr-8R-V99" sceneMemberID="viewController">
+                <viewController id="ppr-8R-V99" customClass="SecondViewController" customModule="Scene_CustomSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Otw-Wg-OSz">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAd-e9-hhu">
@@ -77,7 +77,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hYF-xI-DxS"/>
+        <segue reference="mg1-Nx-75V"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

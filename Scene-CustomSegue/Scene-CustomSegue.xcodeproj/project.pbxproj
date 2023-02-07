@@ -14,6 +14,7 @@
 		9B05502C298A91B200C397B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B05502B298A91B200C397B5 /* Assets.xcassets */; };
 		9B05502F298A91B200C397B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B05502D298A91B200C397B5 /* LaunchScreen.storyboard */; };
 		9B055037298A922F00C397B5 /* NewSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B055036298A922F00C397B5 /* NewSegue.swift */; };
+		9B1AE8522992579E001855ED /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1AE8512992579E001855ED /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9B05502E298A91B200C397B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B055030298A91B200C397B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B055036298A922F00C397B5 /* NewSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSegue.swift; sourceTree = "<group>"; };
+		9B1AE8512992579E001855ED /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				9B055024298A91B100C397B5 /* SceneDelegate.swift */,
 				9B055026298A91B100C397B5 /* ViewController.swift */,
 				9B055028298A91B100C397B5 /* Main.storyboard */,
+				9B1AE8512992579E001855ED /* SecondViewController.swift */,
 				9B05502B298A91B200C397B5 /* Assets.xcassets */,
 				9B05502D298A91B200C397B5 /* LaunchScreen.storyboard */,
 				9B055030298A91B200C397B5 /* Info.plist */,
@@ -144,6 +147,7 @@
 				9B055037298A922F00C397B5 /* NewSegue.swift in Sources */,
 				9B055027298A91B100C397B5 /* ViewController.swift in Sources */,
 				9B055023298A91B100C397B5 /* AppDelegate.swift in Sources */,
+				9B1AE8522992579E001855ED /* SecondViewController.swift in Sources */,
 				9B055025298A91B100C397B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
