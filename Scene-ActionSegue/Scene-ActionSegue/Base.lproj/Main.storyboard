@@ -43,7 +43,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="세그웨이 테스트" id="E8b-7B-CEA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="qym-2a-Hiy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="qym-2a-Hiy">
+                            <connections>
+                                <segue destination="6oa-T4-DBI" kind="show" id="W64-jp-HJc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -94,6 +98,9 @@
             <point key="canvasLocation" x="-198" y="84"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zp6-y6-dMK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
