@@ -7,27 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B075588298D0F8B008500AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B075587298D0F8B008500AF /* AppDelegate.swift */; };
-		9B07558A298D0F8B008500AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B075589298D0F8B008500AF /* SceneDelegate.swift */; };
-		9B07558C298D0F8B008500AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B07558B298D0F8B008500AF /* ViewController.swift */; };
-		9B07558F298D0F8B008500AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B07558D298D0F8B008500AF /* Main.storyboard */; };
-		9B075591298D0F8C008500AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B075590298D0F8C008500AF /* Assets.xcassets */; };
-		9B075594298D0F8C008500AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B075592298D0F8C008500AF /* LaunchScreen.storyboard */; };
+		9B4E98A02994DE8B007EAA20 /* MemoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E989F2994DE8B007EAA20 /* MemoListVC.swift */; };
+		9B4E98A22994DEA0007EAA20 /* MemoFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E98A12994DEA0007EAA20 /* MemoFormVC.swift */; };
+		9B4E98A42994DEB3007EAA20 /* MemoReadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E98A32994DEB3007EAA20 /* MemoReadVC.swift */; };
+		9B4E98A62994DF18007EAA20 /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E98A52994DF18007EAA20 /* MemoCell.swift */; };
+		9B4E98A82994DF68007EAA20 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4E98A72994DF68007EAA20 /* MemoData.swift */; };
+		9BCBDB912994D1A000AD8849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDB902994D1A000AD8849 /* AppDelegate.swift */; };
+		9BCBDB932994D1A000AD8849 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDB922994D1A000AD8849 /* SceneDelegate.swift */; };
+		9BCBDB982994D1A000AD8849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCBDB962994D1A000AD8849 /* Main.storyboard */; };
+		9BCBDB9B2994D1A000AD8849 /* MyMemory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDB992994D1A000AD8849 /* MyMemory.xcdatamodeld */; };
+		9BCBDB9D2994D1A000AD8849 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BCBDB9C2994D1A000AD8849 /* Assets.xcassets */; };
+		9BCBDBA02994D1A000AD8849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCBDB9E2994D1A000AD8849 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9B075584298D0F8B008500AF /* Delegate-UIImgePickerController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Delegate-UIImgePickerController.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B075587298D0F8B008500AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9B075589298D0F8B008500AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9B07558B298D0F8B008500AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9B07558E298D0F8B008500AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9B075590298D0F8C008500AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9B075593298D0F8C008500AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9B075595298D0F8C008500AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B4E989F2994DE8B007EAA20 /* MemoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListVC.swift; sourceTree = "<group>"; };
+		9B4E98A12994DEA0007EAA20 /* MemoFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoFormVC.swift; sourceTree = "<group>"; };
+		9B4E98A32994DEB3007EAA20 /* MemoReadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoReadVC.swift; sourceTree = "<group>"; };
+		9B4E98A52994DF18007EAA20 /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		9B4E98A72994DF68007EAA20 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		9BCBDB8D2994D1A000AD8849 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BCBDB902994D1A000AD8849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BCBDB922994D1A000AD8849 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9BCBDB972994D1A000AD8849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BCBDB9A2994D1A000AD8849 /* MyMemory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyMemory.xcdatamodel; sourceTree = "<group>"; };
+		9BCBDB9C2994D1A000AD8849 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BCBDB9F2994D1A000AD8849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BCBDBA12994D1A000AD8849 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9B075581298D0F8B008500AF /* Frameworks */ = {
+		9BCBDB8A2994D1A000AD8849 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +47,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B07557B298D0F8B008500AF = {
+		9BCBDB842994D1A000AD8849 = {
 			isa = PBXGroup;
 			children = (
-				9B075586298D0F8B008500AF /* Delegate-UIImgePickerController */,
-				9B075585298D0F8B008500AF /* Products */,
+				9BCBDB8F2994D1A000AD8849 /* MyMemory */,
+				9BCBDB8E2994D1A000AD8849 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9B075585298D0F8B008500AF /* Products */ = {
+		9BCBDB8E2994D1A000AD8849 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B075584298D0F8B008500AF /* Delegate-UIImgePickerController.app */,
+				9BCBDB8D2994D1A000AD8849 /* MyMemory.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B075586298D0F8B008500AF /* Delegate-UIImgePickerController */ = {
+		9BCBDB8F2994D1A000AD8849 /* MyMemory */ = {
 			isa = PBXGroup;
 			children = (
-				9B075587298D0F8B008500AF /* AppDelegate.swift */,
-				9B075589298D0F8B008500AF /* SceneDelegate.swift */,
-				9B07558B298D0F8B008500AF /* ViewController.swift */,
-				9B07558D298D0F8B008500AF /* Main.storyboard */,
-				9B075590298D0F8C008500AF /* Assets.xcassets */,
-				9B075592298D0F8C008500AF /* LaunchScreen.storyboard */,
-				9B075595298D0F8C008500AF /* Info.plist */,
+				9BCBDB902994D1A000AD8849 /* AppDelegate.swift */,
+				9BCBDB922994D1A000AD8849 /* SceneDelegate.swift */,
+				9BCBDB962994D1A000AD8849 /* Main.storyboard */,
+				9B4E98A52994DF18007EAA20 /* MemoCell.swift */,
+				9B4E98A72994DF68007EAA20 /* MemoData.swift */,
+				9B4E98A32994DEB3007EAA20 /* MemoReadVC.swift */,
+				9B4E98A12994DEA0007EAA20 /* MemoFormVC.swift */,
+				9B4E989F2994DE8B007EAA20 /* MemoListVC.swift */,
+				9BCBDB9C2994D1A000AD8849 /* Assets.xcassets */,
+				9BCBDB9E2994D1A000AD8849 /* LaunchScreen.storyboard */,
+				9BCBDBA12994D1A000AD8849 /* Info.plist */,
+				9BCBDB992994D1A000AD8849 /* MyMemory.xcdatamodeld */,
 			);
-			path = "Delegate-UIImgePickerController";
+			path = MyMemory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B075583298D0F8B008500AF /* Delegate-UIImgePickerController */ = {
+		9BCBDB8C2994D1A000AD8849 /* MyMemory */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B075598298D0F8C008500AF /* Build configuration list for PBXNativeTarget "Delegate-UIImgePickerController" */;
+			buildConfigurationList = 9BCBDBA42994D1A000AD8849 /* Build configuration list for PBXNativeTarget "MyMemory" */;
 			buildPhases = (
-				9B075580298D0F8B008500AF /* Sources */,
-				9B075581298D0F8B008500AF /* Frameworks */,
-				9B075582298D0F8B008500AF /* Resources */,
+				9BCBDB892994D1A000AD8849 /* Sources */,
+				9BCBDB8A2994D1A000AD8849 /* Frameworks */,
+				9BCBDB8B2994D1A000AD8849 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Delegate-UIImgePickerController";
-			productName = "Delegate-UIImgePickerController";
-			productReference = 9B075584298D0F8B008500AF /* Delegate-UIImgePickerController.app */;
+			name = MyMemory;
+			productName = MyMemory;
+			productReference = 9BCBDB8D2994D1A000AD8849 /* MyMemory.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9B07557C298D0F8B008500AF /* Project object */ = {
+		9BCBDB852994D1A000AD8849 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					9B075583298D0F8B008500AF = {
+					9BCBDB8C2994D1A000AD8849 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 9B07557F298D0F8B008500AF /* Build configuration list for PBXProject "Delegate-UIImgePickerController" */;
+			buildConfigurationList = 9BCBDB882994D1A000AD8849 /* Build configuration list for PBXProject "MyMemory" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +125,60 @@
 				en,
 				Base,
 			);
-			mainGroup = 9B07557B298D0F8B008500AF;
-			productRefGroup = 9B075585298D0F8B008500AF /* Products */;
+			mainGroup = 9BCBDB842994D1A000AD8849;
+			productRefGroup = 9BCBDB8E2994D1A000AD8849 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B075583298D0F8B008500AF /* Delegate-UIImgePickerController */,
+				9BCBDB8C2994D1A000AD8849 /* MyMemory */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9B075582298D0F8B008500AF /* Resources */ = {
+		9BCBDB8B2994D1A000AD8849 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B075594298D0F8C008500AF /* LaunchScreen.storyboard in Resources */,
-				9B075591298D0F8C008500AF /* Assets.xcassets in Resources */,
-				9B07558F298D0F8B008500AF /* Main.storyboard in Resources */,
+				9BCBDBA02994D1A000AD8849 /* LaunchScreen.storyboard in Resources */,
+				9BCBDB9D2994D1A000AD8849 /* Assets.xcassets in Resources */,
+				9BCBDB982994D1A000AD8849 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9B075580298D0F8B008500AF /* Sources */ = {
+		9BCBDB892994D1A000AD8849 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B07558C298D0F8B008500AF /* ViewController.swift in Sources */,
-				9B075588298D0F8B008500AF /* AppDelegate.swift in Sources */,
-				9B07558A298D0F8B008500AF /* SceneDelegate.swift in Sources */,
+				9B4E98A62994DF18007EAA20 /* MemoCell.swift in Sources */,
+				9B4E98A82994DF68007EAA20 /* MemoData.swift in Sources */,
+				9BCBDB9B2994D1A000AD8849 /* MyMemory.xcdatamodeld in Sources */,
+				9B4E98A22994DEA0007EAA20 /* MemoFormVC.swift in Sources */,
+				9B4E98A42994DEB3007EAA20 /* MemoReadVC.swift in Sources */,
+				9BCBDB912994D1A000AD8849 /* AppDelegate.swift in Sources */,
+				9B4E98A02994DE8B007EAA20 /* MemoListVC.swift in Sources */,
+				9BCBDB932994D1A000AD8849 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9B07558D298D0F8B008500AF /* Main.storyboard */ = {
+		9BCBDB962994D1A000AD8849 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9B07558E298D0F8B008500AF /* Base */,
+				9BCBDB972994D1A000AD8849 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		9B075592298D0F8C008500AF /* LaunchScreen.storyboard */ = {
+		9BCBDB9E2994D1A000AD8849 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9B075593298D0F8C008500AF /* Base */,
+				9BCBDB9F2994D1A000AD8849 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +186,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9B075596298D0F8C008500AF /* Debug */ = {
+		9BCBDBA22994D1A000AD8849 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +246,7 @@
 			};
 			name = Debug;
 		};
-		9B075597298D0F8C008500AF /* Release */ = {
+		9BCBDBA32994D1A000AD8849 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +300,7 @@
 			};
 			name = Release;
 		};
-		9B075599298D0F8C008500AF /* Debug */ = {
+		9BCBDBA52994D1A000AD8849 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -288,10 +308,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Delegate-UIImgePickerController/Info.plist";
+				INFOPLIST_FILE = MyMemory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dlwnsgurz.Delegate-UIImgePickerController";
+				PRODUCT_BUNDLE_IDENTIFIER = dlwnsgurz.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -307,7 +328,7 @@
 			};
 			name = Debug;
 		};
-		9B07559A298D0F8C008500AF /* Release */ = {
+		9BCBDBA62994D1A000AD8849 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -315,10 +336,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Delegate-UIImgePickerController/Info.plist";
+				INFOPLIST_FILE = MyMemory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,7 +348,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "dlwnsgurz.Delegate-UIImgePickerController";
+				PRODUCT_BUNDLE_IDENTIFIER = dlwnsgurz.MyMemory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,25 +359,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B07557F298D0F8B008500AF /* Build configuration list for PBXProject "Delegate-UIImgePickerController" */ = {
+		9BCBDB882994D1A000AD8849 /* Build configuration list for PBXProject "MyMemory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B075596298D0F8C008500AF /* Debug */,
-				9B075597298D0F8C008500AF /* Release */,
+				9BCBDBA22994D1A000AD8849 /* Debug */,
+				9BCBDBA32994D1A000AD8849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B075598298D0F8C008500AF /* Build configuration list for PBXNativeTarget "Delegate-UIImgePickerController" */ = {
+		9BCBDBA42994D1A000AD8849 /* Build configuration list for PBXNativeTarget "MyMemory" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B075599298D0F8C008500AF /* Debug */,
-				9B07559A298D0F8C008500AF /* Release */,
+				9BCBDBA52994D1A000AD8849 /* Debug */,
+				9BCBDBA62994D1A000AD8849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9BCBDB992994D1A000AD8849 /* MyMemory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9BCBDB9A2994D1A000AD8849 /* MyMemory.xcdatamodel */,
+			);
+			currentVersion = 9BCBDB9A2994D1A000AD8849 /* MyMemory.xcdatamodel */;
+			path = MyMemory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 9B07557C298D0F8B008500AF /* Project object */;
+	rootObject = 9BCBDB852994D1A000AD8849 /* Project object */;
 }

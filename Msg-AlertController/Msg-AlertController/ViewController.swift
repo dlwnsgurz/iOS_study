@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     
     @IBOutlet var result: UILabel!
+    
+    // viewDidLoad()에 알림창을 present하면 런타임 에러가 발생.
+    // 뷰가 화면에 나타나기도 전에 화면 전환을 시도했으므로..
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
