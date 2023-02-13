@@ -19,7 +19,17 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UITextViewDe
         super.viewDidLoad()
         contents.delegate = self
         
-        // Do any additional setup after loading the view.
+        let bgImage = UIImage(named: "memo-background")!
+        self.view.backgroundColor = UIColor(patternImage: bgImage)
+        
+        contents.layer.borderWidth = 0
+        contents.layer.borderColor = UIColor.clear.cgColor
+        contents.backgroundColor = .clear
+        
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 9
+        self.contents.attributedText = NSAttributedString(string: " ", attributes: [.paragraphStyle: style])
+        contents.text = ""
     }
     
     
@@ -37,6 +47,13 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UITextViewDe
         guard contents.text?.isEmpty == false else {
             let alert = UIAlertController(title: nil, message: "내용을 입력해주세요.", preferredStyle: .alert)
             
+            let imageVC = UIViewController()
+            
+            let image = UIImage(named: "warning-icon-60")
+            let imageView = UIImageView(image: image)
+            imageVC.view = imageView
+            imageVC.preferredContentSize = image?.size ?? CGSize.zero
+            alert.setValue(imageVC, forKey: "contentViewController")
             alert.addAction(UIAlertAction(title: "확인", style: .default))
             present(alert,animated: false)
             return
@@ -69,5 +86,14 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UITextViewDe
         self.previews.image = info[.editedImage] as? UIImage
         
         picker.dismiss(animated: false)
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let bar = self.navigationController?.navigationBar
+        
+        let ts = TimeInterval(0.3)
+        UIView.animate(withDuration: ts){
+            bar?.alpha = (bar?.alpha == 0) ? 1 : 0
+        }
     }
 }

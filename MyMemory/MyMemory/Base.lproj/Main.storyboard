@@ -16,6 +16,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="aEQ-6R-uCU">
+                            <rect key="frame" x="0.0" y="227.33333206176758" width="428" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5g-zr-Alh" customClass="CSLogButton" customModule="MyMemory" customModuleProvider="target">
+                                    <rect key="frame" x="194.66666666666666" y="6.6666666666666661" width="39" height="30.666666666666671"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="더보기"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="A5g-zr-Alh" firstAttribute="centerY" secondItem="aEQ-6R-uCU" secondAttribute="centerY" id="dOb-MA-UKx"/>
+                                <constraint firstItem="A5g-zr-Alh" firstAttribute="centerX" secondItem="aEQ-6R-uCU" secondAttribute="centerX" id="idl-7R-AMr"/>
+                                <constraint firstItem="A5g-zr-Alh" firstAttribute="top" secondItem="aEQ-6R-uCU" secondAttribute="top" constant="6.6666666666666714" id="kub-KB-rKZ"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memoCell" rowHeight="80" id="Ahz-HJ-izt" customClass="MemoCell" customModule="MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="80"/>
@@ -280,6 +297,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bwd-nA-1nf">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="KBK-3j-1NX" kind="relationship" relationship="rootViewController" id="Cbi-GE-X37"/>
                     </connections>

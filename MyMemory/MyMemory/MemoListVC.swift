@@ -13,7 +13,6 @@ class MemoListVC: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
     
