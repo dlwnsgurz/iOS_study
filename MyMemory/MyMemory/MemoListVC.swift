@@ -14,6 +14,17 @@ class MemoListVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let revealVC = self.revealViewController(){
+            
+            let btn = UIBarButtonItem()
+            btn.image = UIImage(named: "sidemenu")
+            btn.target = revealVC
+            btn.action = #selector(revealVC.revealToggle(_:))
+            
+            navigationItem.leftBarButtonItem = btn
+            view.addGestureRecognizer(revealVC.panGestureRecognizer())
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
