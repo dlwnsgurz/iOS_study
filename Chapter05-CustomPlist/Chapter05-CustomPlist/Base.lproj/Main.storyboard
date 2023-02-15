@@ -86,6 +86,9 @@
                                                         <segment title="남"/>
                                                         <segment title="여"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="genderChange:" destination="QmD-qJ-Q9t" eventType="valueChanged" id="BqQ-SM-Zc7"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -107,6 +110,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QAW-k0-Ik0">
                                                     <rect key="frame" x="345" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="changeMarried:" destination="QmD-qJ-Q9t" eventType="valueChanged" id="tZV-Ee-nqu"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>

@@ -13,6 +13,7 @@
 		9BC33558299BAAF600F24E0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BC33557299BAAF600F24E0D /* Assets.xcassets */; };
 		9BC3355B299BAAF600F24E0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC33559299BAAF600F24E0D /* LaunchScreen.storyboard */; };
 		9BC33563299BAD3A00F24E0D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC33562299BAD3A00F24E0D /* ListViewController.swift */; };
+		9BC33565299D0B7C00F24E0D /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BC33564299D0B7C00F24E0D /* UserInfo.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		9BC3355A299BAAF600F24E0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BC3355C299BAAF600F24E0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BC33562299BAD3A00F24E0D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		9BC33564299D0B7C00F24E0D /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				9BC33550299BAAF500F24E0D /* SceneDelegate.swift */,
 				9BC33554299BAAF500F24E0D /* Main.storyboard */,
 				9BC33562299BAD3A00F24E0D /* ListViewController.swift */,
+				9BC33564299D0B7C00F24E0D /* UserInfo.plist */,
 				9BC33557299BAAF600F24E0D /* Assets.xcassets */,
 				9BC33559299BAAF600F24E0D /* LaunchScreen.storyboard */,
 				9BC3355C299BAAF600F24E0D /* Info.plist */,
@@ -128,6 +131,7 @@
 				9BC3355B299BAAF600F24E0D /* LaunchScreen.storyboard in Resources */,
 				9BC33558299BAAF600F24E0D /* Assets.xcassets in Resources */,
 				9BC33556299BAAF500F24E0D /* Main.storyboard in Resources */,
+				9BC33565299D0B7C00F24E0D /* UserInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

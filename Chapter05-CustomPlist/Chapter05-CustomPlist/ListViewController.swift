@@ -14,16 +14,54 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var gender: UISegmentedControl!
     @IBOutlet var married: UISwitch!
     
-    var accountList = [
-        "abc@naver.com",
-        "asdasd@nexon.com",
-        "dasda@naver.com",
-        "zz@naver.com",
-        "asdas@daum.net"
-    ]
+    let plist = UserDefaults.standard
+    
+    var accountList = [String]()
+    
+    var defaultPList : NSDictionary!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.name.text = plist.string(forKey: "name")
+        self.gender.selectedSegmentIndex = plist.integer(forKey: "gender")
+        self.married.isOn = plist.bool(forKey: "married")
+        
+        let accountList = plist.array(forKey: "accountList") as? [String] ?? [String]()
+        
+        self.accountList = accountList
+        
+        // 포르퍼티 리스트 템플릿.
+        if let defaultPListPath = Bundle.main.path(forResource: "UserInfo", ofType: "Plist"){
+            self.defaultPList = NSDictionary(contentsOfFile: defaultPListPath)
+        }
+        
+        // 커스텀 프로퍼티에서 불러오기.
+        if let account = plist.string(forKey: "selectedAccount"){
+            self.account.text = account
+            let customPlist = "\(account).plist"
+            
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            let path = paths[0] as NSString
+            let plist = path.strings(byAppendingPaths: [customPlist]).first!
+            
+            let data = NSMutableDictionary(contentsOfFile: plist)
+            
+            self.name.text = data?["name"] as? String
+            self.gender.selectedSegmentIndex = data?["gender"] as? Int ?? 0
+            self.married.isOn = data?["married"] as? Bool ?? false
+            
+        }
+        
+        if (account.text?.isEmpty)!{
+            self.account.placeholder = "입력된 계정이 없습니다."
+            
+            self.name.isEnabled = false
+            self.married.isEnabled = false
+            self.gender.isEnabled = false
+        }
+        
+        // 피커 뷰 및 바 버튼 설정.
         let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
@@ -33,23 +71,78 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
         toolbar.frame = CGRect(x: 0, y: 0, width: 0, height: 35)
         toolbar.barTintColor = .lightGray
         
+        
         self.account.inputAccessoryView = toolbar
-        
+            
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
+            
         let barButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(pickerDone(_:)))
-        
-        toolbar.setItems([flexSpace, barButton], animated: false)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+            
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let newButton = UIBarButtonItem(title: "New", style: .plain, target: self, action: #selector(newAccount(_:)))
+            
+        toolbar.setItems([newButton, flexSpace, barButton], animated: false)
+        
+        
     }
 
     @objc func pickerDone(_ sender: Any){
         account.endEditing(true)
+        
+        if let _account = self.account.text{
+            let customPlist = "\(_account).plist"
+            
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+            let path = paths[0] as NSString
+            let plist = path.strings(byAppendingPaths: [customPlist]).first!
+            
+            let data = NSMutableDictionary(contentsOfFile: plist)
+            
+            self.name.text = data?["name"] as? String
+            self.gender.selectedSegmentIndex = data?["gender"] as? Int ?? 0
+            self.married.isOn = data?["married"] as? Bool ?? false
+            
+        }
+    }
+    
+    
+    @objc func newAccount(_ sender: Any){
+        
+        self.account.endEditing(true)
+        
+        let alert = UIAlertController(title: "새 계정을 입력하세요.", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField{
+            $0.placeholder = "ex) asdasd@naver.com"
+        }
+        
+        let okAction = UIAlertAction(title: "확인", style: .default){
+            (_) in
+            
+            if let account = alert.textFields?[0].text{
+                self.gender.isEnabled = true
+                self.married.isEnabled = true
+                self.name.isEnabled = true
+                
+                self.accountList.append(account)
+                self.account.text = account
+                self.name.text = ""
+                self.gender.selectedSegmentIndex = 0
+                self.married.isOn = false
+                
+                self.plist.set(self.accountList, forKey: "accountList")
+                self.plist.set(account, forKey: "selectedAccount")
+                self.plist.synchronize()
+                
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel)
+        
+        alert.addAction(okAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: false)
     }
     // MARK: - Table view data source
     
@@ -70,6 +163,77 @@ class ListViewController: UITableViewController, UIPickerViewDelegate, UIPickerV
         
         let account = accountList[row]
         self.account.text = account
+        
+        plist.set(account, forKey: "selectedAccount")
+        plist.synchronize()
+        
+    }
+    
+    @IBAction func changeGender(_ sender: UISegmentedControl) {
+        let value = sender.selectedSegmentIndex
+        
+        let customPlist = "\(self.account.text!).plist"
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let path = paths[0] as NSString
+        let plist = path.strings(byAppendingPaths: [customPlist]).first!
+        
+        let data = NSMutableDictionary(contentsOfFile: plist) ?? NSMutableDictionary(dictionary: self.defaultPList)
+        
+        data.setValue(value, forKey: "gender")
+        data.write(toFile: plist, atomically: true)
+        
+    }
+    
+    @IBAction func changeMarried(_ sender: UISwitch) {
+        let value = sender.isOn
+        
+        let customPlist = "\(self.account.text!).plist"
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let path = paths[0] as NSString
+        let plist = path.strings(byAppendingPaths: [customPlist]).first!
+        
+        let data = NSMutableDictionary(contentsOfFile: plist) ?? NSMutableDictionary(dictionary: self.defaultPList)
+        
+        data.setValue(value, forKey: "married")
+        data.write(toFile: plist, atomically: true)
+        
+        print("custom plist = \(plist)")
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 1 && !(self.account.text?.isEmpty)!{
+            let alert = UIAlertController(title: nil, message: "이름을 입력하세요.", preferredStyle: .alert)
+            
+            alert.addTextField{
+                $0.text = self.name.text
+            }
+            
+            let okAction = UIAlertAction(title: "확인", style: .default){
+                (_) in
+                let value = alert.textFields?[0].text
+                let customPlist = "\(self.account.text!).plist"
+                
+                let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                let path = paths[0] as NSString
+                let plist = path.strings(byAppendingPaths: [customPlist]).first!
+                
+                let data = NSMutableDictionary(contentsOfFile: plist) ?? NSMutableDictionary(dictionary: self.defaultPList)
+                
+                data.setValue(value, forKey: "name")
+                data.write(toFile: plist, atomically: true)
+                
+                self.name.text = value
+            }
+            let cancel = UIAlertAction(title: "취소", style: .cancel)
+            alert.addAction(okAction)
+            alert.addAction(cancel)
+            
+            present(alert, animated: true)
+        }
     }
     
     /*
