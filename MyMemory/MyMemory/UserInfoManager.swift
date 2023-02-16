@@ -80,7 +80,9 @@ class UserInfoManager{
     }
     
     func login(account: String, passwd: String) -> Bool{
-        return false
+
+        
+        return true
     }
     
     func logount() -> Bool{
@@ -92,4 +94,6 @@ class UserInfoManager{
         ud.synchronize()
         return true 
     }
+    
+    
 }

@@ -12,7 +12,8 @@ class SideBarVC: UITableViewController {
     let nameLabel = UILabel()
     let emailLabel = UILabel()
     let profileImage = UIImageView()
-    
+    let uInfo = UserInfoManager()
+
     let titles = ["새 글 작성하기", "친구 새 글", "달력으로 보기", "공지사항", "통계", "계정 관리"]
     
     let icons = [
@@ -32,22 +33,21 @@ class SideBarVC: UITableViewController {
         headerView.backgroundColor = .brown
         headerView.alpha = 0.92
         tableView.tableHeaderView = headerView
-        
+                
         self.nameLabel.frame = CGRect(x: 70, y: 15, width: 120, height: 30)
         self.emailLabel.frame = CGRect(x: 70, y: 30, width: 150, height: 30)
         
-        self.nameLabel.text = "돼지와 함께 춤을"
+        self.nameLabel.text = uInfo.name ?? "GUEST"
         self.nameLabel.textAlignment = .left
         self.nameLabel.font = .systemFont(ofSize: 16)
         self.nameLabel.backgroundColor = .clear
         
-        self.emailLabel.text = "ljhlmkljhlmkljhlmk@naver.com"
+        self.emailLabel.text = uInfo.account ?? ""
         self.emailLabel.textAlignment = .left
         self.emailLabel.font = .systemFont(ofSize: 12)
         self.emailLabel.backgroundColor = .clear
 
-        let defaultProfile = UIImage(named: "profile-bg")
-        self.profileImage.image = defaultProfile
+        self.profileImage.image = uInfo.profile
         self.profileImage.frame = CGRect(x: 10, y: 10, width: 50, height: 50)
         
         self.profileImage.layer.cornerRadius = self.profileImage.frame.width / 2
@@ -62,6 +62,12 @@ class SideBarVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.nameLabel.text = uInfo.name ?? "GUEST"
+        self.emailLabel.text = uInfo.account ?? ""
+        self.profileImage.image = uInfo.profile
     }
 
     // MARK: - Table view data source
