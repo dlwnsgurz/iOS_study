@@ -28,8 +28,14 @@ class MemoListVC: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let ud = UserDefaults.standard
+        if ud.bool(forKey: UserInfoKey.tutorial) == false{
+            let vc = self.instantiateVC(identifier: "MasterVC")
+            self.present(vc!, animated: false)
+            return
+        }
         tableView.reloadData()
-        NSLog("viewWillAppear")
+        
     }
     
     
