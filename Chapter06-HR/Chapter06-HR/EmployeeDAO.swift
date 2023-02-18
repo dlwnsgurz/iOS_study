@@ -58,15 +58,17 @@ class EmployeeDAO{
         self.fmdb.close()
     }
     
-    func find() -> [EmployeeVO] {
+    func find(departCd: Int = 0) -> [EmployeeVO] {
         
         var employeeList = [EmployeeVO]()
         
         do{
+            let condition = departCd == 0 ? "" : "WHERE Employee.depart_cd = \(departCd)"
             let sql = """
                 SELECT emp_cd, dmp_name, join_date, state_cd, department.depart_title
                 FROM employee
                 JOIN department On department.depart_cd = employee.depart_cd
+                \(condition)
                 ORDER BY employee.depart_cd ASC
             """
             
@@ -156,6 +158,23 @@ class EmployeeDAO{
             
         }catch let error as NSError{
             print("Insert Error : \(error.localizedDescription)")
+            return false
+        }
+    }
+    
+    func editState(empCd: Int, stateCd: EmpStateType) -> Bool{
+        
+        do{
+            let sql = " UPDATE Employee SET state_cd = ? WHERE emp_cd = ? "
+            var params = [Any]()
+            
+            params.append(stateCd.rawValue)
+            params.append(empCd)
+            
+            try self.fmdb.executeUpdate(sql, values: params)
+            return true
+        }catch let error as NSError{
+            print("UPDATE Error : \(error.localizedDescription)")
             return false
         }
     }

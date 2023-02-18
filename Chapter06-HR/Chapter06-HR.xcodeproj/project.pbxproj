@@ -23,6 +23,8 @@
 		9BA75761299FB91500AE6002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BA75760299FB91500AE6002 /* Assets.xcassets */; };
 		9BA75764299FB91500AE6002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BA75762299FB91500AE6002 /* LaunchScreen.storyboard */; };
 		9BA7576D299FB93900AE6002 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA7576C299FB93900AE6002 /* libsqlite3.tbd */; };
+		9BE44CB629A0D5E3006EEFBC /* DepartPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE44CB529A0D5E3006EEFBC /* DepartPickerVC.swift */; };
+		9BE44CB829A0E007006EEFBC /* DepartmentInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE44CB729A0E007006EEFBC /* DepartmentInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		9BA75763299FB91500AE6002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BA75765299FB91500AE6002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BA7576C299FB93900AE6002 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9BE44CB529A0D5E3006EEFBC /* DepartPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartPickerVC.swift; sourceTree = "<group>"; };
+		9BE44CB729A0E007006EEFBC /* DepartmentInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +93,11 @@
 				9BA75757299FB91400AE6002 /* AppDelegate.swift */,
 				9BA75759299FB91400AE6002 /* SceneDelegate.swift */,
 				9BA7575D299FB91400AE6002 /* Main.storyboard */,
+				9BE44CB729A0E007006EEFBC /* DepartmentInfoVC.swift */,
 				9B1E3F18299FBE9900DBEFD8 /* DepartmentDAO.swift */,
 				9B1E3F1A299FC61800DBEFD8 /* EmployeeDAO.swift */,
 				9B1E3F13299FBC8C00DBEFD8 /* EmployeeListVC.swift */,
+				9BE44CB529A0D5E3006EEFBC /* DepartPickerVC.swift */,
 				9B1E3F11299FBC7500DBEFD8 /* DepartmentListVC.swift */,
 				9BA75760299FB91500AE6002 /* Assets.xcassets */,
 				9BA75762299FB91500AE6002 /* LaunchScreen.storyboard */,
@@ -194,7 +200,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BA75758299FB91400AE6002 /* AppDelegate.swift in Sources */,
+				9BE44CB829A0E007006EEFBC /* DepartmentInfoVC.swift in Sources */,
 				9B1E3F1B299FC61800DBEFD8 /* EmployeeDAO.swift in Sources */,
+				9BE44CB629A0D5E3006EEFBC /* DepartPickerVC.swift in Sources */,
 				9B1E3F0F299FBA1E00DBEFD8 /* FMResultSet.m in Sources */,
 				9B1E3F19299FBE9900DBEFD8 /* DepartmentDAO.swift in Sources */,
 				9B1E3F12299FBC7500DBEFD8 /* DepartmentListVC.swift in Sources */,
