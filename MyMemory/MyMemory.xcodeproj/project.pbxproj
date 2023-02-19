@@ -33,6 +33,7 @@
 		9B881859299A3DE40080D55E /* button-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B881856299A3DE40080D55E /* button-bg.png */; };
 		9B88185A299A3DE40080D55E /* memo-background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B881857299A3DE40080D55E /* memo-background@2x.png */; };
 		9B94519B299E3CC600E7B8B5 /* TutorialMasterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B94519A299E3CC600E7B8B5 /* TutorialMasterVC.swift */; };
+		9BB97AED29A25F6E0029CADB /* MemoDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB97AEC29A25F6E0029CADB /* MemoDAO.swift */; };
 		9BC33567299D0FB600F24E0D /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC33566299D0FB600F24E0D /* UserInfoManager.swift */; };
 		9BCBDB912994D1A000AD8849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDB902994D1A000AD8849 /* AppDelegate.swift */; };
 		9BCBDB932994D1A000AD8849 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCBDB922994D1A000AD8849 /* SceneDelegate.swift */; };
@@ -71,6 +72,7 @@
 		9B881856299A3DE40080D55E /* button-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-bg.png"; sourceTree = "<group>"; };
 		9B881857299A3DE40080D55E /* memo-background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "memo-background@2x.png"; sourceTree = "<group>"; };
 		9B94519A299E3CC600E7B8B5 /* TutorialMasterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMasterVC.swift; sourceTree = "<group>"; };
+		9BB97AEC29A25F6E0029CADB /* MemoDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDAO.swift; sourceTree = "<group>"; };
 		9BC33566299D0FB600F24E0D /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		9BCBDB8D2994D1A000AD8849 /* MyMemory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMemory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCBDB902994D1A000AD8849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				9B67B9C5299B754400C6B35D /* SideBarVC.swift */,
 				9B4E98A52994DF18007EAA20 /* MemoCell.swift */,
 				9B4E98A72994DF68007EAA20 /* MemoData.swift */,
+				9BB97AEC29A25F6E0029CADB /* MemoDAO.swift */,
 				9B4E98A32994DEB3007EAA20 /* MemoReadVC.swift */,
 				9B4E98A12994DEA0007EAA20 /* MemoFormVC.swift */,
 				9B881852299A3CC70080D55E /* CSLogButton.swift */,
@@ -273,6 +276,7 @@
 				9B4E98A42994DEB3007EAA20 /* MemoReadVC.swift in Sources */,
 				9BCBDB912994D1A000AD8849 /* AppDelegate.swift in Sources */,
 				9B94519B299E3CC600E7B8B5 /* TutorialMasterVC.swift in Sources */,
+				9BB97AED29A25F6E0029CADB /* MemoDAO.swift in Sources */,
 				9B67B9B2299B731D00C6B35D /* SWRevealViewController.m in Sources */,
 				9B4E98A02994DE8B007EAA20 /* MemoListVC.swift in Sources */,
 				9BC33567299D0FB600F24E0D /* UserInfoManager.swift in Sources */,

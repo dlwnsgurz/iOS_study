@@ -10,6 +10,7 @@ import UIKit
 class MemoListVC: UITableViewController {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    lazy var dao = MemoDAO()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class MemoListVC: UITableViewController {
             self.present(vc!, animated: false)
             return
         }
+        self.appDelegate.memolist = self.dao.fetch()
         tableView.reloadData()
         
     }
@@ -75,6 +77,21 @@ class MemoListVC: UITableViewController {
         
         vc.param = row
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let data = self.appDelegate.memolist[indexPath.row]
+        
+        if dao.delete(data.objectID!){
+            self.appDelegate.memolist.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
     /*
     // Override to support conditional editing of the table view.

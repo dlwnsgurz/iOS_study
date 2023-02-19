@@ -18,7 +18,8 @@ class TutorialMasterVC: UIViewController, UIPageViewControllerDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.pageVC = UIPageViewController()
+        self.pageVC = self.instantiateVC(identifier: "PageVC") as? UIPageViewController
+        
         pageVC.dataSource = self
         
         let startContentVC = self.getContentVC(atIndex: 0)!
@@ -26,7 +27,7 @@ class TutorialMasterVC: UIViewController, UIPageViewControllerDataSource{
         
         self.pageVC.view.frame.origin = CGPoint(x: 0, y: 0)
         self.pageVC.view.frame.size.width = self.view.frame.width
-        self.pageVC.view.frame.size.height = self.view.frame.height - 50
+        self.pageVC.view.frame.size.height = self.view.frame.height - 70
         
         self.addChild(self.pageVC)
         self.view.addSubview(self.pageVC.view)
@@ -45,7 +46,7 @@ class TutorialMasterVC: UIViewController, UIPageViewControllerDataSource{
     
     func getContentVC(atIndex idx: Int) -> UIViewController?{
         
-        if self.contentTitles.count < idx || idx < 0{
+        if self.contentTitles.count <= idx || idx < 0{
             return nil
         }
         
@@ -54,7 +55,7 @@ class TutorialMasterVC: UIViewController, UIPageViewControllerDataSource{
         }
         
         cvc.titleText = self.contentTitles[idx]
-        cvc.imageFile = self.contentTitles[idx]
+        cvc.imageFile = self.contentImages[idx]
         cvc.pageIndex = idx
         
         return cvc

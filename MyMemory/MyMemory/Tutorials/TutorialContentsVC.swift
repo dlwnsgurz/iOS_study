@@ -19,6 +19,7 @@ class TutorialContentsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.bgImage.contentMode = .scaleAspectFill
         self.titleLabel.text = titleText
         self.titleLabel.sizeToFit()
         

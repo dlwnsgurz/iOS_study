@@ -15,6 +15,8 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UITextViewDe
     @IBOutlet var contents: UITextView!
     var subject: String! // 제목 (내용의 첫줄)
     
+    lazy var dao = MemoDAO()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         contents.delegate = self
@@ -65,8 +67,7 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate,UITextViewDe
         data.image = previews.image
         data.regdate = Date() // 작성 시각
         
-        let ad = UIApplication.shared.delegate as! AppDelegate
-        ad.memolist.append(data)
+        self.dao.insert(data)
         
         self.navigationController?.popViewController(animated: true)
         
