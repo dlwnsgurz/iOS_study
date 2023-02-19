@@ -7,10 +7,13 @@
 
 import UIKit
 
-class MemoListVC: UITableViewController {
+class MemoListVC: UITableViewController, UISearchBarDelegate {
 
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     lazy var dao = MemoDAO()
+    
+    @IBOutlet var searchBar: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +95,14 @@ class MemoListVC: UITableViewController {
             self.appDelegate.memolist.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        let keyword = searchText
+        
+        self.appDelegate.memolist = self.dao.fetch(keyword: keyword)
+        self.tableView.reloadData()
     }
     /*
     // Override to support conditional editing of the table view.

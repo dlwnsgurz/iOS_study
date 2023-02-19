@@ -16,13 +16,17 @@ class MemoDAO{
         return appDelegate.persistentContainer.viewContext
     }()
     
-    func fetch() -> [MemoData]{
+    func fetch(keyword text: String? = nil) -> [MemoData]{
         var memoList = [MemoData]()
         
         let fetchRequest = MemoMO.fetchRequest()
         
         let regSorter = NSSortDescriptor(key: "regdate", ascending: false)
         fetchRequest.sortDescriptors = [regSorter]
+        
+        if let t = text, t.isEmpty == false{
+            fetchRequest.predicate = .init(format: "contents CONTAINS[c]  %@", t)
+        }
         
         do{
             let resultSet = try self.context.fetch(fetchRequest)
