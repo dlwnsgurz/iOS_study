@@ -14,6 +14,7 @@ class ListVC: UITableViewController {
         return self.fetch()
     }()
     
+    
     func fetch() -> [NSManagedObject]{
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -44,6 +45,13 @@ class ListVC: UITableViewController {
         object.setValue(contents, forKey: "contents")
         object.setValue(Date(), forKey: "regdate")
         
+        let logObject = NSEntityDescription.insertNewObject(forEntityName: "Log", into: context) as! LogMO
+        
+        logObject.regdate = Date()
+        logObject.type = LogType.create.rawValue
+        
+        (object as! BoardMO).addToLogs(logObject)
+        
         do{
             try context.save()
             self.list.insert(object, at: 0)
@@ -53,11 +61,6 @@ class ListVC: UITableViewController {
             return false
         }
         
-    }
-    
-    func add(title: String, contents: String) -> Bool{
-    
-        return true
     }
     
     func delete(object: NSManagedObject) -> Bool{
@@ -87,6 +90,14 @@ class ListVC: UITableViewController {
         object.setValue(title, forKey: "title")
         object.setValue(contents, forKey: "contents")
         object.setValue(Date(), forKey: "regdate")
+        
+        let logObject = NSEntityDescription.insertNewObject(forEntityName: "Log", into: context) as! LogMO
+        
+        logObject.regdate = Date()
+        logObject.type = LogType.edit.rawValue
+        
+        logObject.board = (object as! BoardMO)
+        
         
         do{
             try context.save()
@@ -177,6 +188,18 @@ class ListVC: UITableViewController {
         present(alert, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
+        let object = self.list[indexPath.row] as! BoardMO
+        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "LogVC") as? LogVC else {
+            return
+        }
+        
+        vc.board = object
+        self.show(vc, sender: self)
+        
+    }
     
     @objc func add(_ sender: UIBarButtonItem){
         
