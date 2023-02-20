@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         self.navigationItem.title = "설정"
         
+        // 이메일 레이블 추가
         let lblEmail = UILabel()
         lblEmail.frame = CGRect(x: 30, y: 100, width: 100, height: 30)
         
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
         
         view.addSubview(lblEmail)
         
-        
+        // 자동갱신 레이블 추가
         let lblUpdate = UILabel()
         lblUpdate.frame = CGRect(x: 30, y: 150, width: 100, height: 30)
         
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
         
         view.addSubview(lblUpdate)
         
+        // 갱신주기 레이블 추가
         let lblInterval = UILabel()
         lblInterval.frame = CGRect(x: 30, y: 200, width: 100, height: 30)
         lblInterval.text = "갱신주기"
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
         view.addSubview(lblInterval)
         
         
+        // 텍스트 필드 레이블 추가
         paramEmail = UITextField()
         paramEmail.frame = CGRect(x: 120, y: 100, width: 220, height: 30)
         paramEmail.font = .systemFont(ofSize: 13)
@@ -55,11 +58,13 @@ class ViewController: UIViewController {
 
         view.addSubview(paramEmail)
     
+        // 스위치 레이블 추가
         paramUpdate = UISwitch()
         paramUpdate.frame = CGRect(x: 120, y: 150, width: 50, height: 30)
         paramUpdate.setOn(true, animated: false)
         view.addSubview(paramUpdate)
         
+        // 스테퍼 레이블 추가
         paramInterval = UIStepper()
         paramInterval.frame = CGRect(x: 120, y: 200, width: 50, height: 30)
         paramInterval.maximumValue = 100
@@ -68,6 +73,7 @@ class ViewController: UIViewController {
         paramInterval.stepValue = 1
         
         view.addSubview(paramInterval)
+        
         
         txtUpdate = UILabel()
         txtUpdate.frame = CGRect(x: 250, y: 150, width: 100, height: 30)
