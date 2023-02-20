@@ -39,6 +39,7 @@ class ViewController: UIViewController {
         let v = UIViewController()
         v.view.backgroundColor = .red
         
+        // KVO 패턴을 이용한 알림창 커스터마이징
         alert.setValue(v, forKey: "contentViewController")
         
         self.present(alert, animated: false)
