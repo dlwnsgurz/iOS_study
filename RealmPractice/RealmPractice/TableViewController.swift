@@ -17,14 +17,19 @@ class TableViewController: UITableViewController{
         
         let realm = try! Realm()
         wordList = realm.objects(Word.self)
-    
+                        
+        tableView.rowHeight = 100
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tableView.reloadData()
+        let realm = try! Realm()
+        wordList = realm.objects(Word.self)
         
+        tableView.reloadData()
     }
     
     
@@ -57,33 +62,21 @@ class TableViewController: UITableViewController{
         return count
     }
     
+    // MARK: - 셀 터치 시 단어 수정
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let editViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") as! EditViewController
         
         editViewController.primaryKey = wordList?[indexPath.row]._id
-        editViewController.meaningTF.text = wordList?[indexPath.row].word
-        editViewController.wordTF.text = wordList?[indexPath.row].meaning
-        
-        if let tags = wordList?[indexPath.row].tags {
-            
-            var tagNames = ""
-            
-            for i in 0..<tags.count{
-                tagNames += "\(tags[i].name)"
-            }
-            
-            editViewController.tagLabel.text = tagNames
-        }
         
         navigationController?.pushViewController(editViewController, animated: true)
         
     }
 
-    
+    // MARK: - 추가 버튼 터치 시
     @IBAction func touchUpAddBtn(_ sender: Any) {
         
-        let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "Edit") as! EditViewController
+        let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "Add") as! AddViewController
         
         navigationController?.pushViewController(addViewController, animated: true)
         
