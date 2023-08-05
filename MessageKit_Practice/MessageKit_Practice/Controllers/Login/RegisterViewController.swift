@@ -18,7 +18,8 @@ class RegisterViewController: UIViewController {
     
     private let imageView: UIImageView = {
         
-        let imageView = UIImageView(image: UIImage(named: "logo"))
+        let imageView = UIImageView(image: UIImage(systemName: "person"))
+        imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         return imageView
         
@@ -125,6 +126,19 @@ class RegisterViewController: UIViewController {
         scrollView.addSubview(emailField)
         scrollView.addSubview(passwordField)
         scrollView.addSubview(registerButton)
+        
+        
+        imageView.isUserInteractionEnabled = true
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapChangeProfilePicture))
+        
+        imageView.addGestureRecognizer(gesture)
+
+    }
+    
+    @objc private func didTapChangeProfilePicture(){
+        
+        
 
     }
     
@@ -168,10 +182,17 @@ class RegisterViewController: UIViewController {
     @objc private func registerButtonTapped() {
         
         // 키보드를 내리기 위해
+        firstNameField.resignFirstResponder()
+        lastNameField.resignFirstResponder()
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
         
-        guard let email = emailField.text, let password = passwordField.text, !email.isEmpty, !password.isEmpty, password.count >= 6 else {
+        guard let firstName = firstNameField.text,
+              let lastName = lastNameField.text,
+              let email = emailField.text,
+              let password = passwordField.text,
+              !firstName.isEmpty, !lastName.isEmpty,
+              !email.isEmpty, !password.isEmpty, password.count >= 6 else {
                 
             alertUserError()
             return
@@ -182,12 +203,11 @@ class RegisterViewController: UIViewController {
         
         
         
-
     }
     
     func alertUserError() {
         let alert = UIAlertController(title: "Woops",
-                                      message: "Please Enter all Information For Log In",
+                                      message: "Please Enter all Information For Create a New Account.",
                                       preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK", style: .default)
