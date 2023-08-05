@@ -20,6 +20,7 @@
 		9BFC5B742A7B906100BF3357 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B732A7B906100BF3357 /* VideoPlayerViewController.swift */; };
 		9BFC5B762A7B90B100BF3357 /* NewConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B752A7B90B100BF3357 /* NewConversationViewController.swift */; };
 		9BFC5B782A7B90D400BF3357 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B772A7B90D400BF3357 /* ProfileViewController.swift */; };
+		9BFC5B7C2A7B9C0D00BF3357 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B7B2A7B9C0D00BF3357 /* extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9BFC5B732A7B906100BF3357 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		9BFC5B752A7B90B100BF3357 /* NewConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationViewController.swift; sourceTree = "<group>"; };
 		9BFC5B772A7B90D400BF3357 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9BFC5B7B2A7B9C0D00BF3357 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +85,12 @@
 		9BFC5B662A7B8D7800BF3357 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9BFC5B6D2A7B900F00BF3357 /* LoginViewController.swift */,
-				9BFC5B6F2A7B902100BF3357 /* RegisterViewController.swift */,
+				9BFC5B532A7B892000BF3357 /* ConversationsViewController.swift */,
+				9BFC5B7A2A7B927700BF3357 /* Login */,
 				9BFC5B712A7B905500BF3357 /* PhotoViewerViewController.swift */,
 				9BFC5B732A7B906100BF3357 /* VideoPlayerViewController.swift */,
 				9BFC5B752A7B90B100BF3357 /* NewConversationViewController.swift */,
 				9BFC5B772A7B90D400BF3357 /* ProfileViewController.swift */,
-				9BFC5B532A7B892000BF3357 /* ConversationsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,6 +125,7 @@
 			children = (
 				9BFC5B4F2A7B892000BF3357 /* AppDelegate.swift */,
 				9BFC5B512A7B892000BF3357 /* SceneDelegate.swift */,
+				9BFC5B7B2A7B9C0D00BF3357 /* extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -133,6 +135,15 @@
 			children = (
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		9BFC5B7A2A7B927700BF3357 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9BFC5B6D2A7B900F00BF3357 /* LoginViewController.swift */,
+				9BFC5B6F2A7B902100BF3357 /* RegisterViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +228,7 @@
 				9BFC5B762A7B90B100BF3357 /* NewConversationViewController.swift in Sources */,
 				9BFC5B702A7B902100BF3357 /* RegisterViewController.swift in Sources */,
 				9BFC5B542A7B892000BF3357 /* ConversationsViewController.swift in Sources */,
+				9BFC5B7C2A7B9C0D00BF3357 /* extensions.swift in Sources */,
 				9BFC5B502A7B892000BF3357 /* AppDelegate.swift in Sources */,
 				9BFC5B782A7B90D400BF3357 /* ProfileViewController.swift in Sources */,
 				9BFC5B522A7B892000BF3357 /* SceneDelegate.swift in Sources */,
@@ -367,6 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5SX67S4MM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MessageKit_Practice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -394,6 +407,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5SX67S4MM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MessageKit_Practice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
