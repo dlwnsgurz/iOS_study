@@ -86,11 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				9BFC5B532A7B892000BF3357 /* ConversationsViewController.swift */,
-				9BFC5B7A2A7B927700BF3357 /* Login */,
 				9BFC5B712A7B905500BF3357 /* PhotoViewerViewController.swift */,
 				9BFC5B732A7B906100BF3357 /* VideoPlayerViewController.swift */,
 				9BFC5B752A7B90B100BF3357 /* NewConversationViewController.swift */,
 				9BFC5B772A7B90D400BF3357 /* ProfileViewController.swift */,
+				9BFC5B7A2A7B927700BF3357 /* Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
