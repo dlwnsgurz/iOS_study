@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -91,7 +92,6 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
         textField.autocorrectionType = .no
         textField.addLeftPadding()
         textField.backgroundColor = .white
-        textField.isSecureTextEntry = true
         
         return textField
     }()
@@ -206,6 +206,17 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate {
 
         // MARK: - Firebase Log In
         
+        FirebaseAuth.Auth.auth().createUser(withEmail: email, password: password, completion: { (authResult, error) in
+            guard let result = authResult, error == nil else {
+                print("Error cureation user")
+                return
+            }
+            
+            let user = result.user
+            print("create user : \(user))")
+            
+            
+        })
         
         
     }

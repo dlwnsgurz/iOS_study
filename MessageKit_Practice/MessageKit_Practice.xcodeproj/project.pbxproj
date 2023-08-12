@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5531E7834821885FC6425C09 /* Pods_MessageKit_Practice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2C2203C4BED7D3B6281107E /* Pods_MessageKit_Practice.framework */; };
+		9B91F56E2A87AF5C0030393E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B91F56D2A87AF5C0030393E /* GoogleService-Info.plist */; };
 		9BFC5B502A7B892000BF3357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B4F2A7B892000BF3357 /* AppDelegate.swift */; };
 		9BFC5B522A7B892000BF3357 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B512A7B892000BF3357 /* SceneDelegate.swift */; };
 		9BFC5B542A7B892000BF3357 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFC5B532A7B892000BF3357 /* ConversationsViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		027B5C3B9C0BE9DFD188DB3E /* Pods-MessageKit_Practice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageKit_Practice.debug.xcconfig"; path = "Target Support Files/Pods-MessageKit_Practice/Pods-MessageKit_Practice.debug.xcconfig"; sourceTree = "<group>"; };
 		4BD955206F0683CE71B66F68 /* Pods-MessageKit_Practice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageKit_Practice.release.xcconfig"; path = "Target Support Files/Pods-MessageKit_Practice/Pods-MessageKit_Practice.release.xcconfig"; sourceTree = "<group>"; };
+		9B91F56D2A87AF5C0030393E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9BFC5B4C2A7B892000BF3357 /* MessageKit_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageKit_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFC5B4F2A7B892000BF3357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFC5B512A7B892000BF3357 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		9BFC5B432A7B892000BF3357 = {
 			isa = PBXGroup;
 			children = (
+				9B91F56D2A87AF5C0030393E /* GoogleService-Info.plist */,
 				9BFC5B4E2A7B892000BF3357 /* MessageKit_Practice */,
 				9BFC5B4D2A7B892000BF3357 /* Products */,
 				EC40493F883C676BA07A17EB /* Pods */,
@@ -167,7 +170,6 @@
 				027B5C3B9C0BE9DFD188DB3E /* Pods-MessageKit_Practice.debug.xcconfig */,
 				4BD955206F0683CE71B66F68 /* Pods-MessageKit_Practice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -238,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFC5B5C2A7B892100BF3357 /* LaunchScreen.storyboard in Resources */,
+				9B91F56E2A87AF5C0030393E /* GoogleService-Info.plist in Resources */,
 				9BFC5B592A7B892100BF3357 /* Assets.xcassets in Resources */,
 				9BFC5B572A7B892000BF3357 /* Main.storyboard in Resources */,
 			);
