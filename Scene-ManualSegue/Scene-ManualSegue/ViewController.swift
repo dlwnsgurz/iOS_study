@@ -15,9 +15,9 @@ class ViewController: UIViewController {
     }
 
 
-    @IBAction func wind(_ sender: Any) {
-        // 메뉴얼 세그웨이 실행
-        performSegue(withIdentifier: "ManualWind", sender: self)
+    @IBAction func wind(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "ManualWind", sender: self)
     }
+    
 }
 
