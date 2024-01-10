@@ -13,11 +13,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func unwindToVC(_ segue: UIStoryboardSegue){
-        
-        // Unwind 메소드.
-    }
     
+    @IBAction func unwindVC(_ segue: UIStoryboardSegue){
+        print("gd")
+    }
 }
 
