@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBAction func moveNxt(_ sender: Any) {
         
         // 이동할 뷰 컨트롤러 객체를 StoryBoardID 정보를 이용하여 참조.
-        guard let uvc = self.storyboard!.instantiateViewController(withIdentifier: "secondVC") else { return }
+        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "secondVC") else { return }
         
         // 화면 전환시 애니메이션 타입.
         uvc.modalTransitionStyle = .coverVertical
