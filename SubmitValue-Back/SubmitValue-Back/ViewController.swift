@@ -41,6 +41,7 @@ class ViewController: UIViewController {
 //            resultInterval.text = "\(Int(interval))분 후 갱신"
 //        }
         
+        
         // 코코아 터치 프레임워크에 존재하는 UserDefaults 객체의 인스턴스.
         let ud = UserDefaults.standard
         
