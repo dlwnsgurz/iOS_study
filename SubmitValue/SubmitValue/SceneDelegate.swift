@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  SubmitValue
 //
-//  Created by LEE on 2023/02/01.
+//  Created by LEE on 2024/01/15.
 //
 
 import UIKit

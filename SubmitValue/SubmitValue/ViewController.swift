@@ -2,84 +2,92 @@
 //  ViewController.swift
 //  SubmitValue
 //
-//  Created by LEE on 2023/02/01.
+//  Created by LEE on 2024/01/15.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    // 이메일을 입력 받는 텍스트 필드.
-    @IBOutlet var email: UITextField!
     
-    // 갱신 주기를 설정하는 스테퍼.
-    @IBOutlet var interval: UIStepper!
+    // 이메일 레이블
+    @IBOutlet var emialLabel: UILabel!
     
-    // 자동 갱신 여부를 설정하는 스위치.
-    @IBOutlet var isUpdate: UISwitch!
+    // 이메일 입력 텍스트
+    @IBOutlet var emailText: UITextField!
     
-    // 자동 갱신 여부를 보여주는 레이블.
-    @IBOutlet var isUpdateText: UILabel!
+    // 자동갱신 결과 레이블
+    @IBOutlet var updateResultLabel: UILabel!
+    // 자동갱신 레이블
+    @IBOutlet var updateLabel: UILabel!
+    // 자동갱신 스위치
+    @IBOutlet var updateSwitch: UISwitch!
     
-    // 갱신 주기를 보여주는 레이블.
-    @IBOutlet var intervalText: UILabel!
+    // 갱신주기 결과 레이블
+    @IBOutlet var intervalResultLabel: UILabel!
+    // 갱신주기 레이블
+    @IBOutlet var intervalLabel: UILabel!
+    // 갱신주기 스테퍼
+    @IBOutlet var intervalStepper: UIStepper!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        isUpdateText.text = "갱신함"
-        intervalText.text = "0분 마다"
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        if updateSwitch.isOn{
+            updateResultLabel.text = "자동갱신"
+        }else{
+            updateResultLabel.text = "자동갱신 안함"
+        }
+        
+        intervalResultLabel.text = String(Int(intervalStepper.value)) + "분 마다"
+    }
 
-    // 자동 갱신 여부가 바뀔때마다 호출되는 메소드.
     @IBAction func onSwitch(_ sender: UISwitch) {
         if sender.isOn{
-            isUpdateText.text = "갱신함"
+            updateResultLabel.text = "자동갱신"
         }else{
-            isUpdateText.text = "갱신하지 않음"
+            updateResultLabel.text = "안함"
         }
     }
     
-    // 갱신 주기를 설정할때마다 호출되는 메소드.
     @IBAction func onStepper(_ sender: UIStepper) {
-        let value = Int(sender.value)
-        
-        intervalText.text = "\(value)분 마다"
+    
+        intervalResultLabel.text = String(Int(sender.value)) + "분 마다"
     }
     
-    //
-    @IBAction func onSubmit(_ sender: Any) {
+    @IBAction func onSubmit(_ sender: UIButton) {
         
-        // 값을 전달받은 뷰 컨트롤러 인스턴스를 참조 후, 다운캐스팅.
         guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "RVC") as? ResultViewController else{
             return
         }
         
-        rvc.paramEmail = self.email.text!
-        rvc.paramUpdate = self.isUpdate.isOn
-        rvc.paramInterval = self.interval.value
+        rvc.paramEmail = emailText.text!
+        rvc.paramUpdate = updateSwitch.isOn
+        rvc.paramInterval = intervalStepper.value
         
+//        self.present(rvc, animated: true)
         self.navigationController?.pushViewController(rvc, animated: true)
-        
     }
     
-    @IBAction func onPerfomSegue(_ sender: Any) {
+    @IBAction func onPerfomSegue(_ sender: UIBarButtonItem) {
         
-        self.performSegue(withIdentifier: "ManualSegue", sender: self)
-        
-        
+        self.performSegue(withIdentifier: "ManualSubmit", sender: self)
     }
     
-    // 세그웨이 실행 전 전처리 메소드는 자동으로 호출된다.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let rvc = segue.destination as! ResultViewController
         
-        rvc.paramEmail = self.email.text!
-        rvc.paramUpdate = self.isUpdate.isOn
-        rvc.paramInterval = self.interval.value
+        guard let rvc = segue.destination as? ResultViewController else{ return }
         
+        rvc.paramEmail = emailText.text!
+        rvc.paramUpdate = updateSwitch.isOn
+        rvc.paramInterval = intervalStepper.value
     }
+    
     
 }
 

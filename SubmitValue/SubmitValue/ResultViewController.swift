@@ -2,30 +2,38 @@
 //  ResultViewController.swift
 //  SubmitValue
 //
-//  Created by LEE on 2023/02/01.
+//  Created by LEE on 2024/01/15.
 //
 
 import UIKit
 
-
 class ResultViewController: UIViewController{
     
-    // 화면에 값을 표시하는데 사용하는 레이블
-    @IBOutlet var resultEmail: UILabel!
-    @IBOutlet var resultIsUpdate: UILabel!
-    @IBOutlet var resultInterval: UILabel!
+    // 이메일 레이블
+    @IBOutlet var emailLabel: UILabel!
+    // 갱신 레이블
+    @IBOutlet var updateLabel: UILabel!
+    // 갱신주기 레이블
+    @IBOutlet var intervalLabel: UILabel!
     
-    var paramEmail = ""
-    var paramUpdate = false
-    var paramInterval = 0.0
     
-    override func viewDidLoad() {
-        resultEmail.text = paramEmail
-        resultIsUpdate.text = paramUpdate ? "갱신함" : "갱신 안함"
-        resultInterval.text = "\(Int(paramInterval))분 후 갱신"
+    var paramEmail: String = ""
+    var paramUpdate: Bool = false
+    var paramInterval: Double = 0
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        
+        emailLabel.text = paramEmail
+        updateLabel.text = paramUpdate ? "갱신함" : "갱신안함"
+        intervalLabel.text = String(Int(paramInterval)) + "분 마다 갱신함"
+        
     }
     
     @IBAction func onBack(_ sender: Any) {
-        presentingViewController?.dismiss(animated: true)
+        
+        self.presentingViewController?.dismiss(animated: true)
     }
+    
+    
 }
