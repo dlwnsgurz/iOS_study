@@ -32,31 +32,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillResignActive(_ scene: UIScene) {
-        print("inactive")
-        if #available(iOS 11.0, *){
-            UNUserNotificationCenter.current().getNotificationSettings{ (settings) in
-                if settings.authorizationStatus == .authorized{
-                    let nContent = UNMutableNotificationContent()
-                    nContent.badge = 1
-                    nContent.sound = .default
-                    nContent.title = "로컬 알림 메시지"
-                    nContent.subtitle = "준비된 내용이 아주 많아요! 얼른 다시 앱을 열어주세요!!"
-                    nContent.body = "앗! 왜 나갔어요??? 어서 들어오세요!!"
-                    nContent.userInfo = ["name" : "홍길동"]
-                    
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-                    
-                    let request = UNNotificationRequest(identifier: "wakeup", content: nContent, trigger: trigger)
-                    
-                    UNUserNotificationCenter.current().add(request)
-                }else{
-                    print("사용자가 동의하지 않음")
-                }
+        UNUserNotificationCenter.current().getNotificationSettings{ settings in
+            if settings.authorizationStatus == .authorized{
+                let nContent = UNMutableNotificationContent()
+                nContent.badge = 1
+                nContent.title = "로컬 알림 메시지"
+                nContent.subtitle = "준비된 내용이 아주 많아요! 얼른 다시 앱을 열어주세요!!"
+                nContent.body = "앗! 왜 나갔어요? 어서 들어오세요!!"
+                nContent.sound = .default
+                nContent.userInfo = ["name" : "홍길동"]
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+            
+                let request = UNNotificationRequest(identifier: "wakeup", content: nContent, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request)
+            }else{
+                print("사용자가 동의하지 않음!")
             }
         }
-
-        // Called when the scene will move from an active state to an inactive state.
-        // This may occur due to temporary interruptions (ex. an incoming phone call).
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
