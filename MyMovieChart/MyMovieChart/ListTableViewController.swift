@@ -13,6 +13,7 @@ class ListTableViewController: UITableViewController {
     
     lazy var list: [MovieVO] = {
         var datalist = [MovieVO]()
+
         return datalist
     }()
     
@@ -26,10 +27,12 @@ class ListTableViewController: UITableViewController {
         
     }
     
+    // 섹션 수 설정
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return list.count
     }
     
+    // 테이블 뷰 셀 구성
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let row = list[indexPath.row]
@@ -65,8 +68,7 @@ class ListTableViewController: UITableViewController {
         self.page += 1
         
         callMovieAPI()
-        
-        self.tableView.reloadData()
+
     }
     
     func callMovieAPI(){
@@ -116,6 +118,7 @@ class ListTableViewController: UITableViewController {
         }
     }
     
+    // 섬네일 이미지
     func getThumbnailImage(_ index: Int) -> UIImage{
         
         let mvo = list[index]
