@@ -20,12 +20,14 @@ class ListViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
-        tableView.estimatedRowHeight = 40
+        self.tableView.estimatedRowHeight = 100
+        self.tableView.rowHeight = UITableView.automaticDimension
     }
+    
     
     @IBAction func add(_ sender: Any) {
         let alert = UIAlertController(title: "목록 입력", message: "추가될 글을 작성해주세요", preferredStyle: .alert)
@@ -64,9 +66,15 @@ class ListViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("hello")
-        return 20
-    }
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        
+//        let row = self.list[indexPath.row]
+//        
+//        let height = CGFloat(80 + (row.count / 30) * 20)
+//        
+//        return height
+//    }
+    
+    
 
 }
