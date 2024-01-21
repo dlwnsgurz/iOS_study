@@ -26,7 +26,7 @@ class ListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.estimatedRowHeight = 100
         self.tableView.rowHeight = UITableView.automaticDimension
-    }
+    }ㅇ
     
     
     @IBAction func add(_ sender: Any) {
